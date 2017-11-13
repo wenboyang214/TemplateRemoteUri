@@ -1044,11 +1044,11 @@ log_message_direct "Install directory: $INSTALL_DIR"
 # parse command line arguments
 parse_args $@
 
-if [ "$K8S_MASTER_NODE_HOSTNAME" = "" ] || \
-   [ "$K8S_MASTER_NODE_USERNAME" = "" ] || \
-   [ "$K8S_MASTER_NODE_IDENTITY_FILE_BASE64" = "" ] || \
-   [ "$K8S_UI_ADMIN_USERNAME" = "" ] || \
-   [ "$K8S_UI_ADMIN_PASSWORD" = ""] ; then
+if [[ "$K8S_MASTER_NODE_HOSTNAME" = "" ]] || \
+   [[ "$K8S_MASTER_NODE_USERNAME" = "" ]] || \
+   [[ "$K8S_MASTER_NODE_IDENTITY_FILE_BASE64" = "" ]] || \
+   [[ "$K8S_UI_ADMIN_USERNAME" = "" ]] || \
+   [[ "$K8S_UI_ADMIN_PASSWORD" = ""]] ; then
     log_message_direct "ERROR: Missing required arguments."
     # missing required arguments, print help hints
     help
